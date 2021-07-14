@@ -1,19 +1,19 @@
 # pern-typeorm
 PERN with typeorm docker-compose
 
-#setting ormconfig
+# setting ormconfig
 in ormconfig.json
 if you run on pc you must set\
 {\
  ...,\
  "host": "localhost"\
-}\
+}
 
 if you run on docker you must set\
 {\
  ...,\
  "host": "db"\
-}\
+}
 
 
 # get-started
