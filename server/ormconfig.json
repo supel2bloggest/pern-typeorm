@@ -1,0 +1,30 @@
+{
+   "type": "postgres",
+   "host": "db",
+   "port": 5432,
+   "database": "test",
+   "username": "admin",
+   "password": "admin",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/entities/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "seeds": [
+      "src/seeds/**/*.ts"
+   ],
+   "factories": [
+      "src/factories/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entities",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}

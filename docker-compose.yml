@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+    db:
+        container_name: db
+        image: postgres:13.2
+        environment:
+            POSTGRES_DB: "test"
+            POSTGRES_USER: "admin"
+            POSTGRES_PASSWORD: "admin"
+        ports:
+            - 35432:5432
+        volumes:
+            - /var/lib/postgresql/data
+    api:
+        container_name: api
+        build:
+            context: ./server
+            dockerfile: Dockerfile # on move to prod, update this
+        volumes:
+            - ./server:/api
+            - /api/node_modules
+        ports:
+            - "3000:3000"
+        depends_on:
+            - db
