@@ -28,7 +28,7 @@ run code\
 yarn dev
 </code>
 
-# Docker add project with docker-compose 
+# add project to docker with docker-compose 
 go to main folder\
 <code>
 cd ../
@@ -39,5 +39,20 @@ run docker-compose
 docker-compose up
 </code>
 
+you must access to docker by docker exec -it\
+<code>
+   docker exec -it (container_id)/bin/sh
+</code>
+
+install database\
+<code>
+yarn typeorm migration:run
+</code>
+
+seeding data to database\
+<code>
+yarn seed:run
+</code>
+
 NOTE: please install nodejs and docker before run this project
-# Enjoy Coding
+# Enjoy coding
